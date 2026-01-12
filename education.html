@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raudah | Education</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Dokdo&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Afacad', sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+header{
+  background:#c9d8c3;
+  padding:20px 0;
+  text-align:center;
+}
+
+header h1{
+  font-family:'Dokdo', cursive;
+  font-weight:400;
+  font-size:34px;
+  margin-bottom:8px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#555;
+  margin:0 8px;
+  font-size:13px;
+  letter-spacing:1px;
+  padding:6px 12px;
+  border-radius:6px;
+  transition:background 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover{
+  background:#ffffff;
+  color:#333;
+}
+
+/* ===== EDUCATION SECTION ===== */
+.education-section{
+  padding:60px 8%;
+}
+
+.education-section h2{
+  text-align:center;
+  font-weight:600;
+  margin-bottom:40px;
+  letter-spacing:2px;
+  font-size:22px;
+}
+
+/* grid */
+.education-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 2fr));
+  gap:50px;
+}
+
+/* card */
+.edu-card{
+  border-radius:4px;
+  overflow:hidden;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  background:#f2f2f2;
+}
+
+/* image wrapper */
+.edu-img{
+  height:200px;
+  overflow:hidden;
+}
+
+.edu-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform 0.5s ease;
+}
+
+/* zoom on hover */
+.edu-card:hover img{
+  transform:scale(1.1);
+}
+
+/* bottom info */
+.edu-info{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  background:#e6e6e6;
+  padding:16px;
+}
+
+/* logo */
+.edu-logo{
+  width:42px;
+  height:42px;
+  object-fit:contain;
+  flex-shrink:0;
+}
+
+/* text */
+.edu-text h3{
+  font-size:16px;
+  font-weight:600;
+  margin-bottom:4px;
+}
+
+.edu-text p{
+  font-size:13px;
+  color:#555;
+  line-height:1.6;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#c9d8c3;
+  padding:20px;
+  text-align:center;
+  font-size:13px;
+  color:#555;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Raudah</h1>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="profile.html">PROFILE</a>
+    <a href="education.html">EDUCATION</a>
+    <a href="experience.html">EXPERIENCE</a>
+    <a href="project.html">PROJECT</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+</header>
+
+<section class="education-section">
+
+  <div class="education-grid">
+
+    <!-- SK -->
+    <div class="edu-card">
+      <div class="edu-img">
+        <img src="picture/sktm.png" alt="SK Taman Melati">
+      </div>
+      <div class="edu-info">
+        <img src="picture/logo sktm.png" class="edu-logo" alt="SK Logo">
+        <div class="edu-text">
+          <h3>SK Taman Melati</h3>
+          <p>Primary School</p>
+          <p>UPSR: 4A</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- KAFA -->
+    <div class="edu-card">
+      <div class="edu-img">
+        <img src="picture/kafa.png" alt="Kafa Madrasah">
+      </div>
+      <div class="edu-info">
+        <img src="picture/logo kafa.png" class="edu-logo" alt="KAFA Logo">
+        <div class="edu-text">
+          <h3>Kafa Madrasah Iktisamiah</h3>
+          <p>Primary Religious School</p>
+          <p>UPKK: 8A</p>
+          <p>UPSRA: 2A</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SMK -->
+    <div class="edu-card">
+      <div class="edu-img">
+        <img src="picture/smktm.png" alt="SMK Taman Melati">
+      </div>
+      <div class="edu-info">
+        <img src="picture/logo smktm2.png" class="edu-logo" alt="SMK Logo">
+        <div class="edu-text">
+          <h3>SMK Taman Melati</h3>
+          <p>Secondary School</p>
+          <p>PT3: 4A</p>
+          <p>SPM: 4A</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Diploma -->
+    <div class="edu-card">
+      <div class="edu-img">
+        <img src="picture/uitmbb.jpg" alt="UiTM Diploma">
+      </div>
+      <div class="edu-info">
+        <img src="picture/logo uitm.png" class="edu-logo" alt="UiTM Logo">
+        <div class="edu-text">
+          <h3>UiTM Bukit Besi, Terengganu</h3>
+          <p>Diploma</p>
+          <p>CGPA: 3.63</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Degree -->
+    <div class="edu-card">
+      <div class="edu-img">
+        <img src="picture/uitmpp.jpg" alt="UiTM Degree">
+      </div>
+      <div class="edu-info">
+        <img src="picture/logo uitm.png" class="edu-logo" alt="UiTM Logo">
+        <div class="edu-text">
+          <h3>UiTM Puncak Perdana, Selangor</h3>
+          <p>Bachelor’s Degree</p>
+          <p>Current CGPA: 3.48</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 Raudah | E-Resume
+</footer>
+
+</body>
+</html>

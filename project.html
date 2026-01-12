@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raudah | Projects</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Dokdo&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Afacad', sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+header{
+  background:#c9d8c3;
+  padding:20px 0;
+  text-align:center;
+}
+
+header h1{
+  font-family:'Dokdo', cursive;
+  font-size:34px;
+  margin-bottom:8px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#555;
+  margin:0 8px;
+  font-size:13px;
+  letter-spacing:1px;
+  padding:6px 12px;
+  border-radius:6px;
+  transition:0.3s;
+}
+
+nav a:hover{
+  background:#fff;
+  color:#333;
+}
+
+/* ===== SECTION ===== */
+section{
+  padding:60px 8%;
+}
+
+section h2{
+  font-size:20px;
+  margin-bottom:25px;
+}
+
+/* ===== TAB GALLERY (USED EVERYWHERE) ===== */
+.cert-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.cert-card{
+  border:1px solid #ddd;
+  border-radius:7px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.cert-card:hover{
+  transform:scale(1.03);
+}
+
+.cert-card img,
+.cert-card video{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  pointer-events:none;
+}
+
+.cert-card p{
+  padding:12px;
+  font-size:13px;
+  text-align:center;
+  color:#555;
+}
+
+/* ===== LIGHTBOX ===== */
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.85);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:1000;
+}
+
+.lightbox img,
+.lightbox video{
+  max-width:85%;
+  max-height:85%;
+  border-radius:10px;
+}
+
+.lightbox iframe{
+  width:85%;
+  height:85%;
+  border-radius:10px;
+  border:none;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#c9d8c3;
+  padding:20px;
+  text-align:center;
+  font-size:13px;
+  color:#555;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Raudah</h1>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="profile.html">PROFILE</a>
+    <a href="education.html">EDUCATION</a>
+    <a href="experience.html">EXPERIENCE</a>
+    <a href="project.html">PROJECT</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+</header>
+
+<!-- ===== ACADEMIC PROJECTS ===== -->
+<section>
+<h2>Academic Projects</h2>
+
+<div class="cert-grid">
+  <div class="cert-card" onclick="openMedia('image','picture/compsociety.jpg')">
+    <img src="picture/compsociety.jpg">
+    <p>Infographic on Word Document</p>
+  </div>
+
+  <div class="cert-card" onclick="openMedia('video', 'video/acproject2.mp4')">
+    <video muted><source src="video/acproject2.mp4"></video>
+    <p>Non-Linear Multimedia</p>
+  </div>
+
+  <div class="cert-card" onclick="openMedia('video','video/databasepetgrooming.mp4')">
+    <video muted><source src="video/databasepetgrooming.mp4"></video>
+    <p>Pet Grooming Center Database</p>
+  </div>
+
+</div>
+</section>
+
+<!-- ===== WORK PROJECTS ===== -->
+<section>
+<h2>Work Projects</h2>
+
+<div class="cert-grid">
+  <div class="cert-card" onclick="openMedia('image','picture/workproject1.png')">
+    <img src="picture/workproject1.png">
+    <p>PPE Guide</p>
+  </div>
+
+  <div class="cert-card" onclick="openMedia('image','picture/workproject2.png')">
+    <img src="picture/workproject2.png">
+    <p>Banner Countdown Design</p>
+  </div>
+
+
+  <div class="cert-card" onclick="openMedia('video','video/teamintro.mp4')">
+    <video muted><source src="video/teamintro.mp4"></video>
+    <p>Team Introduction Video</p>
+  </div>
+
+
+  <div class="cert-card" onclick="openMedia('image','picture/workproject5.png')">
+    <img src="picture/workproject5.png">
+    <p>Photo Board Design</p>
+  </div>
+
+  <div class="cert-card" onclick="openMedia('image','picture/workproject8.png')">
+    <img src="picture/workproject8.png">
+    <p>CO2 Signage Design</p>
+  </div>
+</div>
+</section>
+
+<!-- ===== PERSONAL PROJECTS ===== -->
+<section>
+<h2>Personal Projects</h2>
+
+<div class="cert-grid">
+  <div class="cert-card" onclick="openMedia('image','picture/personal1.jpg')">
+    <img src="picture/personal1.jpg">
+    <p>Competition Poster</p>
+  </div>
+
+  <div class="cert-card" onclick="openMedia('image','picture/workproject3.png')">
+    <video muted><source src="picture/workproject3.png"></video>
+    <p>Signage Design</p>
+  </div>
+
+  <div class="cert-card" onclick="openMedia('image','picture/workproject4.png')">
+    <video muted><source src="picture/workproject4.png"></video>
+    <p>Signage Design</p>
+  </div>
+</div>
+</section>
+
+<!-- ===== LIGHTBOX ===== -->
+<div class="lightbox" id="lightbox" onclick="closeMedia()">
+  <img id="lightbox-img">
+  <iframe id="lightbox-iframe" allow="autoplay"></iframe>
+</div>
+
+<footer>
+© 2026 Raudah | E-Resume
+</footer>
+
+<script>
+function openMedia(type, src){
+  const lb = document.getElementById("lightbox");
+  const img = document.getElementById("lightbox-img");
+  const iframe = document.getElementById("lightbox-iframe");
+
+  lb.style.display = "flex";
+
+  if(type === "image"){
+    img.style.display="block";
+    iframe.style.display="none";
+    img.src = src;
+  }else{
+    img.style.display="none";
+    iframe.style.display="block";
+    iframe.src = src;
+  }
+}
+
+function closeMedia(){
+  const iframe = document.getElementById("lightbox-iframe");
+  iframe.src = "";
+  document.getElementById("lightbox").style.display="none";
+}
+</script>
+
+</body>
+</html>

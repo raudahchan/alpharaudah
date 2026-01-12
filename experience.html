@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raudah | Experience</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Dokdo&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Afacad', sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+header{
+  background:#c9d8c3;
+  padding:20px 0;
+  text-align:center;
+}
+
+header h1{
+  font-family:'Dokdo', cursive;
+  font-weight:400;
+  font-size:34px;
+  margin-bottom:8px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#555;
+  margin:0 8px;
+  font-size:13px;
+  letter-spacing:1px;
+  padding:6px 12px;
+  border-radius:6px;
+  transition:background 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover{
+  background:#ffffff;
+  color:#333;
+}
+
+/* ===== SECTION ===== */
+section{
+  padding:60px 8%;
+}
+
+section h2{
+  font-weight:600;
+  margin-bottom:25px;
+  font-size:20px;
+}
+
+/* ===== INTERNSHIP SLIDER ===== */
+.slider{
+  position:relative;
+  overflow:hidden;
+  border-radius:0px;
+}
+
+.slides{
+  display:flex;
+  transition:0.5s ease;
+}
+
+.slides img{
+  width:100%;
+  flex-shrink:0;
+  object-fit:cover;
+}
+
+.slider-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,0.45);
+  color:#fff;
+  border:none;
+  font-size:22px;
+  padding:10px 14px;
+  cursor:pointer;
+  border-radius:50%;
+}
+
+.prev{ left:15px; }
+.next{ right:15px; }
+
+.dots{
+  text-align:center;
+  margin-top:14px;
+}
+
+.dot{
+  height:10px;
+  width:10px;
+  background:#ccc;
+  display:inline-block;
+  border-radius:50%;
+  margin:0 4px;
+  cursor:pointer;
+}
+
+.dot.active{
+  background:#666;
+}
+
+/* ===== CERTIFICATE ===== */
+.cert-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:20px;
+}
+
+.cert-card{
+  border:1px solid #ddd;
+  border-radius:7px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.cert-card:hover{
+  transform:scale(1.03);
+}
+
+.cert-card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+
+.cert-card p{
+  padding:12px;
+  font-size:13px;
+  text-align:center;
+  color:#555;
+}
+
+/* ===== LIGHTBOX ===== */
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.85);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:1000;
+}
+
+.lightbox img{
+  max-width:85%;
+  max-height:85%;
+  border-radius:10px;
+}
+
+/* ===== TRAINING TIMELINE ===== */
+.timeline{
+  position:relative;
+  margin-left:15px;
+}
+
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:7px;
+  top:0;
+  bottom:0;
+  width:2px;
+  background:#333;
+}
+
+.timeline-item{
+  position:relative;
+  padding-left:35px;
+  margin-bottom:22px;
+}
+
+.timeline-item::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:6px;
+  width:16px;
+  height:16px;
+  background:#333;
+  border-radius:50%;
+}
+
+.timeline-content{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  font-size:14px;
+  color:#555;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#c9d8c3;
+  padding:20px;
+  text-align:center;
+  font-size:13px;
+  color:#555;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Raudah</h1>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="profile.html">PROFILE</a>
+    <a href="education.html">EDUCATION</a>
+    <a href="experience.html">EXPERIENCE</a>
+    <a href="project.html">PROJECT</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+</header>
+
+<!-- ===== INTERNSHIP ===== -->
+<section>
+  <h2>Volvo Car Manufacturing Malaysia Internship (Sept 2023 – Feb 2024)</h2>
+
+  <div class="slider">
+    <div class="slides" id="slides">
+      <img src="picture/volvo1.jpg">
+      <img src="picture/volvo2.jpg">
+      <img src="picture/volvo3.jpg">
+      <img src="picture/volvo4.jpg">
+    </div>
+
+    <button class="slider-btn prev" onclick="moveSlide(-1)">❮</button>
+    <button class="slider-btn next" onclick="moveSlide(1)">❯</button>
+  </div>
+
+  <div class="dots">
+    <span class="dot active" onclick="goSlide(0)"></span>
+    <span class="dot" onclick="goSlide(1)"></span>
+    <span class="dot" onclick="goSlide(2)"></span>
+    <span class="dot" onclick="goSlide(3)"></span>
+  </div>
+</section>
+
+<!-- ===== CERTIFICATE ===== -->
+<section>
+  <h2>Certificate</h2>
+
+  <div class="cert-grid">
+    <div class="cert-card" onclick="openLightbox(this)">
+      <img src="picture/cert1.png">
+      <p>Telecommunication Professional Certificates</p>
+    </div>
+    <div class="cert-card" onclick="openLightbox(this)">
+      <img src="picture/cert2.png">
+      <p>Working At Height (WAH)</p>
+    </div>
+    <div class="cert-card" onclick="openLightbox(this)">
+      <img src="picture/ntmsp.png">
+      <p>NIOSH – TM Safety Passport</p>
+    </div>
+    <div class="cert-card" onclick="openLightbox(this)">
+      <img src="picture/cert4.png">
+      <p>ZABSI – Ventilation Industry Visit</p>
+    </div>
+    <div class="cert-card" onclick="openLightbox(this)">
+      <img src="picture/cert5.png">
+      <p>ZABSI – Whispers Of The Hands: Sign Language</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRAINING ===== -->
+<section>
+  <h2>Training</h2>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <span>Program Latihan Pencegahan Penyakit Pekerjaan Kebangsaan (NODiP)</span>
+        <span>MAY 2024</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <span>Incident Reporting and Analysis Technique (NIOSH)</span>
+        <span>MAY 2024</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <span>Interpretation of Result by a Hygiene Tech 1</span>
+        <span>MAY 2024</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <span>Kursus Pensijilan Kompetensi Kejuruteraan Telekomunikasi</span>
+        <span>MARCH 2024</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <span>Working at Height (WAH) Competency Training</span>
+        <span>MARCH 2024</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <span>Noise Exposure: Noise Control Measure in The Workplace</span>
+        <span>JUNE 2023</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <span>Industrial Hygiene Talk (MIHA)</span>
+        <span>MAY 2023</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>
+
+<footer>
+  © 2026 Raudah | E-Resume
+</footer>
+
+<script>
+let index = 0;
+const slides = document.getElementById("slides");
+const dots = document.querySelectorAll(".dot");
+
+function moveSlide(n){
+  index = (index + n + 4) % 4;
+  updateSlide();
+}
+
+function goSlide(n){
+  index = n;
+  updateSlide();
+}
+
+function updateSlide(){
+  slides.style.transform = `translateX(-${index * 100}%)`;
+  dots.forEach(d => d.classList.remove("active"));
+  dots[index].classList.add("active");
+}
+
+function openLightbox(card){
+  document.getElementById("lightbox").style.display="flex";
+  document.getElementById("lightbox-img").src =
+    card.querySelector("img").src;
+}
+
+function closeLightbox(){
+  document.getElementById("lightbox").style.display="none";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raudah | Profile</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Dokdo&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Afacad', sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+header{
+  background:#c9d8c3;
+  padding:20px 0;
+  text-align:center;
+}
+
+header h1{
+  font-family:'Dokdo', cursive;
+  font-weight:400;
+  margin-bottom:8px;
+  font-size:34px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#555;
+  margin:0 8px;
+  font-size:13px;
+  letter-spacing:1px;
+  padding:6px 12px;
+  border-radius:6px;
+  transition:background 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover{
+  background:#ffffff;
+  color:#333;
+}
+
+/* ===== PROFILE SECTION ===== */
+.profile-section{
+  padding:60px 8%;
+}
+
+.profile-grid{
+  display:grid;
+  grid-template-columns:1fr 1.4fr 1fr;
+  gap:50px;
+}
+
+/* LEFT */
+.profile-left{
+  text-align:left;
+}
+
+.profile-pic{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  background:#e6f2ff;
+  margin-bottom:16px;
+}
+
+.profile-left h2{
+  font-weight:600;
+  margin-bottom:4px;
+  font-size:20px;
+}
+
+.profile-left p{
+  font-size:14px;
+  color:#666;
+  margin-bottom:20px;
+}
+
+.profile-left h4{
+  font-size:15px;
+  font-weight:600;
+  margin:20px 0 6px;
+}
+
+.profile-left span{
+  font-size:13px;
+  color:#555;
+  display:block;
+  margin-bottom:6px;
+}
+
+/* MIDDLE */
+.profile-middle h3{
+  font-weight:600;
+  margin-bottom:6px;
+  font-size:16px;
+}
+
+.profile-middle p{
+  font-size:14px;
+  color:#555;
+  line-height:1.7;
+  margin-bottom:20px;
+}
+
+/* RIGHT */
+.profile-right h3{
+  font-weight:600;
+  margin-bottom:14px;
+  font-size:16px;
+}
+
+.skill{
+  margin-bottom:16px;
+}
+
+.skill p{
+  font-size:13px;
+  margin-bottom:6px;
+}
+
+.bar{
+  height:6px;
+  background:#ddd;
+  border-radius:6px;
+  overflow:hidden;
+}
+
+.bar span{
+  display:block;
+  height:100%;
+  background:#2f3b1f;
+  border-radius:6px;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#c9d8c3;
+  padding:20px;
+  text-align:center;
+  font-size:13px;
+  color:#555;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Raudah</h1>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="profile.html">PROFILE</a>
+    <a href="education.html">EDUCATION</a>
+    <a href="experience.html">EXPERIENCE</a>
+    <a href="project.html">PROJECT</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+</header>
+
+<section class="profile-section">
+  <div class="profile-grid">
+
+    <!-- LEFT -->
+    <div class="profile-left">
+      <div class="profile-pic"></div>
+      <h2>Raudah</h2>
+      <p>Data • System</p>
+
+      <h4>Contact</h4>
+      <span>Email: mulyadirraudah@gmail.com</span>
+
+      <h4>Languages</h4>
+      <span>English</span>
+       <div class="bar"><span style="width:90%"></span></div>
+      <span>Malay</span>
+       <div class="bar"><span style="width:99%"></span></div>
+    </div>
+
+    <!-- MIDDLE -->
+    <div class="profile-middle">
+      <h3>Currently Pursuing</h3>
+      <p>
+        Bachelor of Information Science (Hons.) System Management<br>
+        (CDIM262)
+      </p>
+
+      <h3>Student ID</h3>
+      <p>2025120231</p>
+
+      <h3>Course</h3>
+      <p>Web Design and Development (IMS458)</p>
+
+      <h3>Address</h3>
+      <p>
+        PV2, No 2, Jalan Taman Melati 1,<br>
+        Taman Melati, Setapak,<br>
+        53100 Kuala Lumpur,<br>
+        W. Persekutuan Kuala Lumpur
+      </p>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="profile-right">
+      <h3>Skills</h3>
+
+      <div class="skill">
+        <p>Adaptability</p>
+        <div class="bar"><span style="width:90%"></span></div>
+      </div>
+
+      <div class="skill">
+        <p>Teamwork</p>
+        <div class="bar"><span style="width:78%"></span></div>
+      </div>
+
+      <div class="skill">
+        <p>Communication</p>
+        <div class="bar"><span style="width:83%"></span></div>
+      </div>
+
+      <h3 style="margin-top:30px;">Software Skills</h3>
+
+      <div class="skill">
+        <p>Microsoft Excel</p>
+        <div class="bar"><span style="width:75%"></span></div>
+      </div>
+
+      <div class="skill">
+        <p>Canva</p>
+        <div class="bar"><span style="width:100%"></span></div>
+      </div>
+
+      <div class="skill">
+        <p>Google Tools</p>
+        <div class="bar"><span style="width:97%"></span></div>
+      </div>
+
+      <div class="skill">
+        <p>Visual Studio Code</p>
+        <div class="bar"><span style="width:80%"></span></div>
+      </div>
+
+      <div class="skill">
+        <p>Microsoft Access</p>
+        <div class="bar"><span style="width:75%"></span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 Raudah | E-Resume
+</footer>
+
+</body>
+</html>
